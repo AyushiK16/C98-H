@@ -16,22 +16,22 @@ def readData(file1, file2):
     print('FileA', dataA)
     print('FileB', dataB)
 
-    file1.write(dataB)
-    file2.write(dataA)
-    print('FileA', dataA)
-    print('FileB', dataB)
+    writeData(file1,file2)
+
+    
 
 
-    print(dataA, dataB)
+    #print(dataA, dataB)
 
 def writeData(file1, file2):
     global dataA
     global dataB
+
+    fA = open(file1, 'w')
+    fB = open(file2, 'w')
     
-    file1.write(dataB)
-    file2.write(dataA)
-    print('FileA', dataA)
-    print('FileB', dataB)
+    fA.write(dataB)
+    fB.write(dataA)
 
 
 readData(A,B)
@@ -39,6 +39,11 @@ readData(A,B)
 
 
 '''
+file1.write(dataB)
+    file2.write(dataA)
+    print('FileA', dataA)
+    print('FileB', dataB)
+
 readData(A,B)
 print('FileA', dataA)
 print('FileB', dataB)
